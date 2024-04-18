@@ -30,43 +30,43 @@ VALUES
 #For this project I used SQL to query the Superstore database to get information about items sold at the store and their prices. 
 
 #Use a SELECT statement to order the items by price.
-select item_name, price
-from superstore
-order by price desc;
+SELECT item_name, price
+FROM superstore
+ORDER BY price desc;
 
 #Show some statistics about the item prices.
-select sum(price)
-from superstore;
+SELECT SUM(price)
+FROM superstore;
 
-select max(price)
-from superstore;
+SELECT MAX(price)
+FROM superstore;
 
-select avg(price)
-from superstore;
+SELECT AVG(price)
+FROM superstore;
 
 #Show a statistic about the price for items in the category of "Kitchen Supplies". 
-select avg(price)
-from superstore
-where category="Kitchen Supplies";
+SELECT AVG(price)
+FROM superstore
+WHERE category="Kitchen Supplies";
 
 #Use a select statement to show the quantities of items in the catergory of "Appliances".
-select item_name, stock_quantity
-from superstore
-where category="Appliances";
+SELECT item_name, stock_quantity
+FROM superstore
+WHERE category="Appliances";
 
 #Use a select statement to show the average rating of "Furnishings".
-select item_name, average_rating
-from superstore
-where category="Furnishings"
-order by average_rating desc;
+SELECT item_name, average_rating
+FROM superstore
+WHERE category="Furnishings"
+ORDER BY average_rating desc;
 
 #Use a select statement to show the item name, price, and average rating in the category of "Electronics".
-select item_name, average_rating, price
-from superstore
-where category="Electronics"
-order by average_rating desc;
+SELECT item_name, average_rating, price
+FROM superstore
+WHERE category="Electronics"
+ORDER BY average_rating desc;
 
 #Use a select statement to show all the columns of Superstore data with preface to the items category and stock quantity.
-select *
-from superstore
-order by category, stock_quantity desc;
+SELECT *
+FROM superstore
+ORDER BY category, stock_quantity desc;
